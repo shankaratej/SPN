@@ -47,7 +47,7 @@ while True:
     elif hue_value<167:
         color="VIOLET"
     else:
-        color="RED"
+        color="UNKOWN"
 
     pixel_center_bgr=hsv_frame[cy,cx]
     cv2.putText(frame, color,(10,50), 0,1,(255,0,0),2)
