@@ -4,6 +4,8 @@
 import numpy as np
 import cv2
 
+from playsound import playsound\
+
 # Capturing video through webcam
 webcam = cv2.VideoCapture(0)
 webcam.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
@@ -34,14 +36,18 @@ while True:
     hue_value=pixel_center[0]
     color="UNDEFINED"
 
-    if hue_value < 5:
+    if hue_value == 5:
         color= "RED"
-    elif hue_value<22:
+       # playsound("//home//teja//Downloads//Green.m4a", block=False)
+    elif hue_value <22:
         color="ORANGE"
+        p#laysound("//home//teja//Downloads//Green.m4a", block=False)
     elif hue_value< 33:
         color="YELLOW"
-    elif hue_value<78:
+    elif hue_value==78:
         color="GREEN"
+
+
     elif hue_value<131:
         color="BLUE"
     elif hue_value<167:
